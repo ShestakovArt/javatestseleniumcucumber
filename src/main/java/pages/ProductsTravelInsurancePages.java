@@ -91,46 +91,46 @@ public class ProductsTravelInsurancePages extends BasePage{
         }
     }
 
-    public void fillField(String fieldName, Object value){
+    public void fillField(String fieldName, String value){
         switch (fieldName){
             case("Фамилия(Застрахованные)"):
-                fillField(surname_vzr, (String) value);
+                fillField(surname_vzr, value);
                 break;
             case("Имя(Застрахованные)"):
-                fillField(name_vzr, (String) value);
+                fillField(name_vzr, value);
                 break;
             case("Дата рождения(Застрахованные)"):
-                fillField(birthDate_vzr, (String) value);
+                fillField(birthDate_vzr, value);
                 break;
             case("Фамилия(Страхователь)"):
-                fillField(person_lastName, (String) value);
+                fillField(person_lastName, value);
                 break;
             case("Имя(Страхователь)"):
-                fillField(person_firstName, (String) value);
+                fillField(person_firstName, value);
                 break;
             case("Отчество(Страхователь)"):
-                fillField(person_middleName, (String) value);
+                fillField(person_middleName, value);
                 break;
             case("Дата рождения(Страхователь)"):
-                fillField(person_birthDate, (String) value);
+                fillField(person_birthDate, value);
                 break;
             case("Серия паспорта(Страхователь)"):
-                fillField(passportSeries, (String) value);
+                fillField(passportSeries, value);
                 break;
             case("Номер паспорта(Страхователь)"):
-                fillField(passportNumber, (String) value);
+                fillField(passportNumber, value);
                 break;
             case("Дата выдачи(Страхователь)"):
-                fillField(documentDate, (String) value);
+                fillField(documentDate, value);
                 break;
             case("Кем выдан(Страхователь)"):
-                fillField(documentIssue, (String) value);
+                fillField(documentIssue, value);
                 break;
         }
     }
 
     public void fillFields(DataTable fields){
-        fields.asMap(String.class, String.class).forEach((k, v)-> fillField((String) k,v));
+        fields.asMap(String.class, String.class).forEach((k, v)-> fillField((String) k,(String)v));
     }
 
     public void randomGender() {

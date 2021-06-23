@@ -8,8 +8,8 @@ import org.junit.runner.RunWith;
         features = {"src/test/resources/"},
         glue = {"steps"},
         tags = "@testcase_1",
-        plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"},
-        publish = true
+        plugin = {"io.qameta.allure.cucumber6jvm.AllureCucumber6Jvm"}
+//        publish = true
 )
 public class CucumberRunner {
 }
